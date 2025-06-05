@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .home-container {
+      height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 20px;
+    background: linear-gradient(135deg, #e0f7fa, #f0f0f0);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+  }
+
+.home-logo {
+  max-width: 550px;
+  height: auto;
+  margin-bottom: 24px;
+  transition: transform 0.3s ease;
+}
+
+.home-logo:hover {
+  transform: scale(1.05);
+}
+
+.home-heading {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.home-subtext {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.home-button {
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 26px;
+  font-size: 15px;
+  background: linear-gradient(135deg, #c4d9f2, #93afd5);
+  color: rgb(30, 49, 133);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: 0 4px 14px rgba(0, 112, 243, 0.4);
+  transition: all 0.25s ease-in-out;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.home-button:hover {
+  background-color: #005bb5;
+  transform: translateY(-2px);
+}
+
+.home-heading-with-tooltip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0070f3;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.tooltip-icon:hover {
+  background-color: #005bb5;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: 500px;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 8px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease;
+  font-size: 14px;
+  line-height: 1.4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.signup-prompt {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #444;
+}
+
+.signup-prompt a {
+  color: #0070f3;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.signup-prompt a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  margin-top: 16px;
+  padding: 8px 20px;
+  background: #888;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #555;
+}
