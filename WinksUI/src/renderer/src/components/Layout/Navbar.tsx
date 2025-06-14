@@ -89,20 +89,29 @@ export default function Navbar({ onSelect }: Props) {
         </div>
 
 
-      <button
-        onClick={handleLogout}
-        style={{
-          marginTop: 'auto',
-          backgroundColor: '#e53935',
-          color: 'white',
-          padding: '10px 16px',
-          border: 'none',
-          borderRadius: '6px',
-          cursor: 'pointer',
-        }}
-      >
-        Logout
-      </button>
+        <button
+          onClick={handleLogout}
+          style={{
+            marginTop: 'auto',
+            backgroundColor: '#e53935',
+            color: 'white',
+            padding: '10px 16px',
+            border: 'none',
+            borderRadius: '6px',
+            cursor: 'pointer',
+            transition: 'transform 0.2s ease, background-color 0.3s ease',
+          }}
+          onMouseEnter={(e) => {
+            (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1.05)';
+            (e.currentTarget as HTMLButtonElement).style.backgroundColor = '#d32f2f';
+          }}
+          onMouseLeave={(e) => {
+            (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1)';
+            (e.currentTarget as HTMLButtonElement).style.backgroundColor = '#e53935';
+          }}
+        >
+          Logout
+        </button>
     </nav>
   );
 }

@@ -1,23 +1,16 @@
-import { useState } from 'react';
-import MainLayout from '../Layout/MainLayout';
+import { useNavigate } from 'react-router-dom';
 import './HomePage.css';
 import logo from '../../images/logo2.png';
-import { useNavigate } from 'react-router-dom';
 
 export default function HomePage() {
-  const [entered, setEntered] = useState(false);
   const navigate = useNavigate();
-
-  if (entered) {
-    return <MainLayout onLogout={() => setEntered(false)} />;
-  }
 
   return (
     <div className="home-container">
-      <img src={logo} alt="Winks logo" className="home-logo" />
+      <img src={logo} alt="Winks logo" className="home-logo animated-logo" />
 
       <div className="home-heading-with-tooltip">
-        <h1 className="home-heading">Welcome!</h1>
+        <h1 className="home-heading">Welcome to <span className="highlight">Winks</span>!</h1>
         <div className="tooltip-container">
           <span className="tooltip-icon">?</span>
           <div className="tooltip-text">
@@ -26,13 +19,14 @@ export default function HomePage() {
         </div>
       </div>
 
-      <p className="home-subtext">Let's begin your journey!</p>
+      <p className="home-subtext">Start your journey with a blink.</p>
 
-      <button className="home-button" onClick={() => navigate('/calibration')}>
-        Dive in
+      <button
+        className="home-button pulse"
+        onClick={() => navigate('/calibration')}
+      >
+        Dive In 
       </button>
-
-
 
     </div>
   );

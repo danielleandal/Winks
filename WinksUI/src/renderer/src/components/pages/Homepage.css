@@ -23,7 +23,7 @@ html, body {
   }
 
 .home-logo {
-  max-width: 550px;
+  max-width: 700px;
   height: auto;
   margin-bottom: 24px;
   transition: transform 0.3s ease;
@@ -34,14 +34,14 @@ html, body {
 }
 
 .home-heading {
-  font-size: 28px;
+  font-size: 48px;
   font-weight: 600;
   color: #333;
   margin-bottom: 12px;
 }
 
 .home-subtext {
-  font-size: 16px;
+  font-size: 25px;
   color: #666;
   margin-bottom: 24px;
 }
@@ -49,7 +49,7 @@ html, body {
 .home-button {
   font-family: 'Poppins', sans-serif;
   padding: 10px 26px;
-  font-size: 15px;
+  font-size: 25px;
   background: linear-gradient(135deg, #c4d9f2, #93afd5);
   color: rgb(30, 49, 133);
   border: none;
@@ -88,10 +88,10 @@ html, body {
   color: white;
   font-weight: bold;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 30px;
   transition: background-color 0.2s ease;
 }
 
@@ -114,7 +114,7 @@ html, body {
   left: 50%;
   transform: translateX(-50%);
   transition: opacity 0.3s ease;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 1.4;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -155,4 +155,54 @@ html, body {
 
 .btn:hover {
   background: #555;
+}
+/* Add to your CSS file below existing styles */
+
+.animated-logo {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.highlight {
+  color: #0070f3;
+  font-weight: 700;
+}
+
+.pulse {
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 112, 243, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 112, 243, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 112, 243, 0);
+  }
+}
+
+
+@media (max-width: 600px) {
+  .home-logo {
+    max-width: 200px;
+  }
+
+  .home-heading {
+    font-size: 18px;
+  }
+
+  .home-subtext {
+    font-size: 13px;
+  }
 }
