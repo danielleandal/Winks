@@ -62,8 +62,16 @@ export default function CalibrationPage() {
       borderRadius: '10px',
       fontSize: '16px',
       cursor: 'pointer',
-      transition: 'background 0.3s ease',
+      transition: 'transform 0.2s ease, box-shadow 0.2s ease',
       width: '200px',
+    }}
+    onMouseOver={(e) => {
+      (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1.05)';
+      (e.currentTarget as HTMLButtonElement).style.boxShadow = '0 6px 18px rgba(0, 112, 243, 0.4)';
+    }}
+    onMouseOut={(e) => {
+      (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1)';
+      (e.currentTarget as HTMLButtonElement).style.boxShadow = 'none';
     }}
   >
     Save Settings
@@ -73,15 +81,23 @@ export default function CalibrationPage() {
     onClick={handleProceed}
     style={{
       padding: '12px 32px',
-      background: '0070f3',
+      background: '#5c80ff',
       color: 'white',
       fontWeight: '600',
       border: 'none',
       borderRadius: '10px',
       fontSize: '16px',
       cursor: 'pointer',
-      transition: 'background 0.3s ease',
+      transition: 'transform 0.2s ease, box-shadow 0.2s ease',
       width: '200px',
+    }}
+    onMouseOver={(e) => {
+      (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1.05)';
+      (e.currentTarget as HTMLButtonElement).style.boxShadow = '0 6px 18px rgba(8, 72, 131, 0.4)';
+    }}
+    onMouseOut={(e) => {
+      (e.currentTarget as HTMLButtonElement).style.transform = 'scale(1)';
+      (e.currentTarget as HTMLButtonElement).style.boxShadow = 'none';
     }}
   >
     Proceed
