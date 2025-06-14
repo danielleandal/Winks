@@ -2,9 +2,11 @@ import { useState } from 'react';
 import MainLayout from '../Layout/MainLayout';
 import './HomePage.css';
 import logo from '../../images/logo2.png';
+import { useNavigate } from 'react-router-dom';
 
 export default function HomePage() {
   const [entered, setEntered] = useState(false);
+  const navigate = useNavigate();
 
   if (entered) {
     return <MainLayout onLogout={() => setEntered(false)} />;
@@ -26,10 +28,7 @@ export default function HomePage() {
 
       <p className="home-subtext">Let's begin your journey!</p>
 
-      <button className="home-button" onClick={() => {
-        console.log('Dive In clicked');
-        setEntered(true);
-        }}>
+      <button className="home-button" onClick={() => navigate('/calibration')}>
         Dive in
       </button>
 

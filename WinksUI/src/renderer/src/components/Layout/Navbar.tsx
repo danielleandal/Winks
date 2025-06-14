@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 type Props = {
   onSelect: (page: 'account' | 'settings') => void;
@@ -15,7 +16,20 @@ const linkStyle: React.CSSProperties = {
   padding: 0,
 };
 
-export default function Navbar({ onSelect, onLogout }: Props) {
+
+
+export default function Navbar({ onSelect }: Props) {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    //onLogout();
+    navigate('/'); // Navigate to Homepage
+  };
+
+  const handleQuickLinks = () => {
+    navigate('/quick-links');
+  };
+
   return (
     <nav
       style={{
@@ -44,11 +58,39 @@ export default function Navbar({ onSelect, onLogout }: Props) {
               Settings
             </button>
           </li>
+
         </ul>
+
+
       </div>
 
+
+      <div style={{ marginTop: '40px' }}>
+          <button
+            onClick={handleQuickLinks}
+            style={{
+              background: 'linear-gradient(135deg, #b8e1ff, #6a9eff)',
+              color: '#003366',
+              padding: '12px 20px',
+              border: 'none',
+              borderRadius: '10px',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+              width: '90%',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+              fontSize: '16px',
+              transition: 'transform 0.2s ease',
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
+            onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+          >
+            Quick Links
+          </button>
+        </div>
+
+
       <button
-        onClick={onLogout}
+        onClick={handleLogout}
         style={{
           marginTop: 'auto',
           backgroundColor: '#e53935',

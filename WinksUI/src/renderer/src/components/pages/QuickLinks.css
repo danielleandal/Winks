@@ -1,0 +1,89 @@
+body{
+    background-color: #f0f4ff;
+}
+
+.quick-links-container {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #f0f4ff, #ffffff);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  }
+  
+  .quick-links-container h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #2c3e50;
+  }
+  
+  .tiles-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  
+  .tile {
+    width: 220px;
+    height: 220px;
+    background: white;
+    border-radius: 18px;
+    text-decoration: none;
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    border: 2px solid transparent;
+  }
+  
+  .tile:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+    border-color: #5c80ff;
+  }
+  
+  .tile-icon {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 16px;
+    transition: transform 0.3s ease;
+  }
+  
+  .tile:hover .tile-icon {
+    transform: rotate(5deg) scale(1.1);
+  }
+  
+  .tile-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  /* Back Button */
+  .back-button {
+    margin-top: 20px;
+    padding: 14px 34px;
+    background: linear-gradient(135deg, #5c80ff, #3558e3);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(92, 128, 255, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background: linear-gradient(135deg, #3f66f1, #2038cc);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(63, 102, 241, 0.4);
+  }
